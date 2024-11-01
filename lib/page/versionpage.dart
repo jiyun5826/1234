@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:project/page/camerapage.dart';
+import 'package:project/page/camerapage1.dart';
+import 'package:project/page/camerapage2.dart';
+import 'package:project/quiz/answerchoice.dart';
 
 class VersionPage extends StatelessWidget {
   const VersionPage({super.key});
@@ -17,23 +19,51 @@ class VersionPage extends StatelessWidget {
           children: [
             Text('choose the version'),
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                FloatingActionButton(
-                  onPressed: () {
-                    Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => CameraPage()),
-                    );
-                  },
-                  child: Icon(Icons.person),
+                Padding(
+                  padding: const EdgeInsets.all(50),
+                  child: Container(
+                    width: 150, // 원하는 너비
+                    height: 150, // 원하는 높이
+                    child: FloatingActionButton(
+                      onPressed: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                              builder: (context) => AnswerChoice()),
+                        );
+                      },
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(Icons.person, size: 30),
+                          Text("adult"),
+                        ],
+                      ),
+                    ),
+                  ),
                 ),
-                FloatingActionButton(
-                  onPressed: () {
-                    Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => CameraPage()),
-                    );
-                  },
-                  child: Icon(Icons.child_care),
+                Padding(
+                  padding: const EdgeInsets.all(50),
+                  child: Container(
+                    width: 150, // 원하는 너비
+                    height: 150, // 원하는 높이
+                    child: FloatingActionButton(
+                      onPressed: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                              builder: (context) => CameraPage2()),
+                        );
+                      },
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(Icons.child_care, size: 30),
+                          Text("child"),
+                        ],
+                      ),
+                    ),
+                  ),
                 ),
               ],
             ),
