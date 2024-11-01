@@ -19,7 +19,7 @@ class CameraPageState extends State<CameraPage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text('click the camera button'),
+            Text('click the camera button aaaaaaaaaaaaaa'),
             ButtonTheme(
                 child: FloatingActionButton(
               onPressed: () {},
