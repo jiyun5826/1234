@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project/recognition/camerarecognition.dart';
 
 class CameraPage2 extends StatefulWidget {
   const CameraPage2({super.key});
@@ -27,7 +28,12 @@ class CameraPage2State extends State<CameraPage2> {
                 width: 150,
                 height: 150,
                 child: FloatingActionButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                          builder: (context) => CameraRecognitionPage()),
+                    );
+                  },
                   child: Icon(Icons.camera_alt),
                 ),
               ),
