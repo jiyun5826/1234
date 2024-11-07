@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project/recognition/camerarecognition.dart';
 
 class CameraPage1 extends StatefulWidget {
   const CameraPage1({super.key});
@@ -21,17 +22,35 @@ class CameraPage1State extends State<CameraPage1> {
           children: [
             Text('click the camera button'),
             ButtonTheme(
-                child: Padding(
-              padding: const EdgeInsets.all(50),
-              child: Container(
-                width: 150,
-                height: 150,
-                child: FloatingActionButton(
-                  onPressed: () {},
-                  child: Icon(Icons.camera_alt),
+              child: Padding(
+                padding: const EdgeInsets.all(50),
+                child: Container(
+                  width: 150,
+                  height: 150,
+                  child: FloatingActionButton(
+                    onPressed: () {
+                      // showDialog(
+                      //   context: context,
+                      //   builder: (context) => AlertDialog(
+                      //     contentPadding: EdgeInsets.zero,
+                      //     content: Container(
+                      //       width: 700,
+                      //       height: 400,
+                      //       child: CameraRecognitionPage(),
+                      //     ),
+                      //   )
+                      // )
+
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                            builder: (context) => CameraRecognitionPage()),
+                      );
+                    },
+                    child: Icon(Icons.camera_alt),
+                  ),
                 ),
               ),
-            ))
+            ),
           ],
         ),
       ),

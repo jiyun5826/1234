@@ -30,7 +30,9 @@ class VersionPage extends StatelessWidget {
                       onPressed: () {
                         Navigator.of(context).push(
                           MaterialPageRoute(
-                              builder: (context) => AnswerChoice()),
+                              builder: (context) =>
+                                  AnswerChoice() //원래 camerapage1으로 연결돼야하는데 확인차 그냥 answrchoice로 연결시켜놈
+                              ),
                         );
                       },
                       child: Column(
