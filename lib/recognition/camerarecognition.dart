@@ -62,7 +62,7 @@ class _CameraRecognitionPageState extends State<CameraRecognitionPage> {
                           BoxShadow(
                             color: Colors.black
                                 .withOpacity(0.3), // 그림자 색상 (여기선 투명한 검정색)
-                            spreadRadius: 5, // 그림자의 확장 정도
+                            spreadRadius: 6, // 그림자의 확장 정도
                             blurRadius: 10, // 그림자 흐림 정도
                             offset: Offset(0, 4), // 그림자의 위치 (가로, 세로)
                           ),
