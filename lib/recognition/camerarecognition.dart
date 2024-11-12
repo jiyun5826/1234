@@ -81,13 +81,6 @@ class _CameraRecognitionPageState extends State<CameraRecognitionPage> {
                     //   aspectRatio: _cameraController!.value.aspectRatio,
                     //   child: CameraPreview(_cameraController!),
                     // ), 얘네를 container로 대체함
-
-                    // ElevatedButton(
-                    //   onPressed: () {
-                    //     // 카메라 인식 기능을 추가하거나 사진을 찍는 기능을 구현할 수 있음
-                    //   },
-                    //   child: Text('Capture'),
-                    // ),
                   ],
                 ),
               ],

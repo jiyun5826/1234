@@ -66,6 +66,22 @@ class AnswerChoice extends StatelessWidget {
                     ),
                   ),
                 ),
+                Padding(
+                  padding: const EdgeInsets.all(50),
+                  child: Container(
+                    width: 150,
+                    height: 150,
+                    child: FloatingActionButton(
+                      onPressed: () {
+                        // Navigator.of(context).push(
+                        //   MaterialPageRoute(builder: (context) => CameraPage1()),
+                        // );
+                        //어느 페이지로 연결될지 하면 됨
+                      },
+                      child: Text("ect"),
+                    ),
+                  ),
+                ),
               ],
             ),
           ],
