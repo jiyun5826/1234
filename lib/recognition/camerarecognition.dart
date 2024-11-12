@@ -74,13 +74,30 @@ class _CameraRecognitionPageState extends State<CameraRecognitionPage> {
                       // ),
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(20),
-                        child: CameraPreview(_cameraController!),
+                        child: Stack(
+                          children: [
+                            CameraPreview(_cameraController!),
+                            Positioned(
+                              bottom: 20,
+                              right: 20,
+                              child: FloatingActionButton(
+                                onPressed: () {
+                                  Navigator.of(context).push(
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            CameraRecognitionPage()),
+                                  );
+                                },
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
+                      // AspectRatio(
+                      //   aspectRatio: _cameraController!.value.aspectRatio,
+                      //   child: CameraPreview(_cameraController!),
+                      // ), 얘네를 container로 대체함
                     ),
-                    // AspectRatio(
-                    //   aspectRatio: _cameraController!.value.aspectRatio,
-                    //   child: CameraPreview(_cameraController!),
-                    // ), 얘네를 container로 대체함
                   ],
                 ),
               ],
