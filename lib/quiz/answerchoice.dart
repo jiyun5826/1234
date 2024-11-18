@@ -1,6 +1,6 @@
 // answer_choice.dart
 import 'package:flutter/material.dart';
-import 'package:project/answer/answeresult.dart'; // AnswerResultPage를 import
+import 'package:project/quiz/answeresult.dart'; // AnswerResultPage를 import
 
 class AnswerChoice extends StatelessWidget {
   const AnswerChoice({super.key});
@@ -36,7 +36,7 @@ class AnswerChoice extends StatelessWidget {
                     height: 150,
                     child: FloatingActionButton(
                       onPressed: () {
-                        _navigateToAnswerResult(context, '종이');
+                        _navigateToAnswerResult(context, '0');
                       },
                       child: Text("종이"),
                     ),
@@ -49,7 +49,7 @@ class AnswerChoice extends StatelessWidget {
                     height: 150,
                     child: FloatingActionButton(
                       onPressed: () {
-                        _navigateToAnswerResult(context, '플라스틱');
+                        _navigateToAnswerResult(context, '1');
                       },
                       child: Text("플라스틱"),
                     ),
@@ -62,7 +62,7 @@ class AnswerChoice extends StatelessWidget {
                     height: 150,
                     child: FloatingActionButton(
                       onPressed: () {
-                        _navigateToAnswerResult(context, '캔');
+                        _navigateToAnswerResult(context, '2');
                       },
                       child: Text("캔"),
                     ),
@@ -75,7 +75,7 @@ class AnswerChoice extends StatelessWidget {
                     height: 150,
                     child: FloatingActionButton(
                       onPressed: () {
-                        _navigateToAnswerResult(context, '일반쓰레기');
+                        _navigateToAnswerResult(context, '3');
                       },
                       child: Text("일반쓰레기"),
                     ),

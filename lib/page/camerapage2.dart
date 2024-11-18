@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:project/recognition/camerarecognition.dart';
-import 'package:project/recognition/teachablemachine.dart';
 
 class CameraPage2 extends StatefulWidget {
   const CameraPage2({super.key});
