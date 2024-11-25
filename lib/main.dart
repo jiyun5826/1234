@@ -20,6 +20,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'smart trash can',
       home: const VersionPage(),
+      theme: ThemeData(fontFamily: "NanumSquareRound"),
     );
   }
 }

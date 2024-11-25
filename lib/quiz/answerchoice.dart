@@ -25,59 +25,76 @@ class AnswerChoice extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text('Choose the answer'),
+            // Text('Choose the answer'),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Padding(
-                  padding: const EdgeInsets.all(50),
+                  padding: const EdgeInsets.all(10),
                   child: Container(
-                    width: 150,
-                    height: 150,
+                    width: 650,
+                    height: 300,
                     child: FloatingActionButton(
                       onPressed: () {
                         _navigateToAnswerResult(context, '0');
                       },
-                      child: Text("종이"),
+                      child: Text(
+                        "종이",
+                        style: TextStyle(fontSize: 50),
+                      ),
                     ),
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.all(50),
+                  padding: const EdgeInsets.all(10),
                   child: Container(
-                    width: 150,
-                    height: 150,
+                    width: 650,
+                    height: 300,
                     child: FloatingActionButton(
                       onPressed: () {
                         _navigateToAnswerResult(context, '1');
                       },
-                      child: Text("플라스틱"),
+                      child: Text(
+                        "플라스틱",
+                        style: TextStyle(fontSize: 50),
+                      ),
                     ),
                   ),
                 ),
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
                 Padding(
-                  padding: const EdgeInsets.all(50),
+                  padding: const EdgeInsets.all(10),
                   child: Container(
-                    width: 150,
-                    height: 150,
+                    width: 650,
+                    height: 300,
                     child: FloatingActionButton(
                       onPressed: () {
                         _navigateToAnswerResult(context, '2');
                       },
-                      child: Text("캔"),
+                      child: Text(
+                        "캔",
+                        style: TextStyle(fontSize: 50),
+                      ),
                     ),
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.all(50),
+                  padding: const EdgeInsets.all(10),
                   child: Container(
-                    width: 150,
-                    height: 150,
+                    width: 650,
+                    height: 300,
                     child: FloatingActionButton(
                       onPressed: () {
                         _navigateToAnswerResult(context, '3');
                       },
-                      child: Text("일반쓰레기"),
+                      child: Text(
+                        "일반쓰레기",
+                        style: TextStyle(fontSize: 50),
+                      ),
                     ),
                   ),
                 ),
