@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:project/page/camerapage1.dart';
 import 'package:project/page/camerapage2.dart';
-import 'package:project/quiz/answerchoice.dart';
+// import 'package:project/quiz/answerchoice.dart';
 
 class VersionPage extends StatelessWidget {
   const VersionPage({super.key});
@@ -31,7 +31,7 @@ class VersionPage extends StatelessWidget {
                         Navigator.of(context).push(
                           MaterialPageRoute(
                               builder: (context) =>
-                                  AnswerChoice() //원래 camerapage1으로 연결돼야하는데 확인차 그냥 answrchoice로 연결시켜놈
+                                  CameraPage1() //원래 camerapage1으로 연결돼야하는데 확인차 그냥 answrchoice로 연결시켜놈
                               ),
                         );
                       },

@@ -1,15 +1,17 @@
 // answer_result.dart
 import 'package:flutter/material.dart';
 import 'package:project/page/camerapage2.dart';
-import 'package:project/quiz/answerchoice.dart'; // AnswerChoice 페이지 import
+// import 'package:project/quiz/answerchoice.dart'; // AnswerChoice 페이지 import
 
 class AnswerResultPage extends StatelessWidget {
   final String selectedAnswer;
+  final String recognizedAnswer;
 
-  AnswerResultPage({required this.selectedAnswer});
+  AnswerResultPage(
+      {required this.selectedAnswer, required this.recognizedAnswer});
 
   // recognizedAnswer를 getter로 선언
-  String get recognizedAnswer => '0'; // 실제로는 값을 받아오는 로직이 필요
+  // String get recognizedAnswer => '0'; // 실제로는 값을 받아오는 로직이 필요
 
   // answer를 getter로 선언
   String get answer {
@@ -94,12 +96,7 @@ class AnswerResultPage extends StatelessWidget {
             if (!isCorrect)
               ElevatedButton(
                 onPressed: () {
-                  Navigator.pushReplacement(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => AnswerChoice(),
-                    ),
-                  );
+                  Navigator.pop(context); // AnswerChoice로 돌아가기
                 },
                 child: Text('다시 시도'),
               ),

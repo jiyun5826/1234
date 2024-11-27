@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:project/recognition/camerarecognition.dart';
+import 'package:project/recognition/camerarecognition2.dart';
 
 class CameraPage2 extends StatefulWidget {
   const CameraPage2({super.key});
@@ -31,7 +31,7 @@ class CameraPage2State extends State<CameraPage2> {
                   onPressed: () {
                     Navigator.of(context).push(
                       MaterialPageRoute(
-                          builder: (context) => CameraRecognitionPage()),
+                          builder: (context) => CameraRecognitionPage2()),
                     );
                   },
                   child: Icon(Icons.camera_alt),

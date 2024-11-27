@@ -3,13 +3,16 @@ import 'package:flutter/material.dart';
 import 'package:project/quiz/answeresult.dart'; // AnswerResultPage를 import
 
 class AnswerChoice extends StatelessWidget {
-  const AnswerChoice({super.key});
+  final String result;
+
+  const AnswerChoice({super.key, required this.result});
 
   void _navigateToAnswerResult(BuildContext context, String selectedAnswer) {
     Navigator.push(
       context,
       MaterialPageRoute(
-        builder: (context) => AnswerResultPage(selectedAnswer: selectedAnswer),
+        builder: (context) => AnswerResultPage(
+            selectedAnswer: selectedAnswer, recognizedAnswer: result),
       ),
     );
   }

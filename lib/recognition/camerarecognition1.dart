@@ -1,13 +1,16 @@
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 import 'package:tflite/tflite.dart';
+import 'package:project/normal/open.dart';
 
-class CameraRecognitionPage extends StatefulWidget {
+class CameraRecognitionPage1 extends StatefulWidget {
+  const CameraRecognitionPage1({super.key});
+
   @override
-  _CameraRecognitionPageState createState() => _CameraRecognitionPageState();
+  CameraRecognitionPage1State createState() => CameraRecognitionPage1State();
 }
 
-class _CameraRecognitionPageState extends State<CameraRecognitionPage> {
+class CameraRecognitionPage1State extends State<CameraRecognitionPage1> {
   CameraController? _cameraController;
   List<CameraDescription>? _cameras;
   bool _isCameraInitialized = false;
@@ -119,7 +122,15 @@ class _CameraRecognitionPageState extends State<CameraRecognitionPage> {
                     ),
                     SizedBox(height: 20),
                     ElevatedButton(
-                      onPressed: _captureAndRunModel,
+                      onPressed: () async {
+                        await _captureAndRunModel(); // 사진 촬영 및 모델 실행
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  Open(recognizedAnswer: _result)), // 페이지 이동
+                        );
+                      },
                       child: Text('Capture and Predict'),
                     ),
                   ],

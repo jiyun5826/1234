@@ -2,10 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:project/page/camerapage1.dart';
 
 class Open extends StatelessWidget {
-  const Open({super.key});
+  final String recognizedAnswer;
+
+  const Open({super.key, required this.recognizedAnswer});
 
   // recognizedAnswer를 getter로 선언
-  String get recognizedAnswer => '0'; // 실제로는 값을 받아오는 로직이 필요
+  // String get recognizedAnswer => '0'; // 실제로는 값을 받아오는 로직이 필요
 
   // answer를 getter로 선언
   String get answer {
