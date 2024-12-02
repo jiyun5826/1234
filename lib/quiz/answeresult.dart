@@ -1,7 +1,5 @@
-// answer_result.dart
 import 'package:flutter/material.dart';
 import 'package:project/page/camerapage2.dart';
-// import 'package:project/quiz/answerchoice.dart'; // AnswerChoice 페이지 import
 
 class AnswerResultPage extends StatelessWidget {
   final String selectedAnswer;
@@ -10,10 +8,6 @@ class AnswerResultPage extends StatelessWidget {
   AnswerResultPage(
       {required this.selectedAnswer, required this.recognizedAnswer});
 
-  // recognizedAnswer를 getter로 선언
-  // String get recognizedAnswer => '0'; // 실제로는 값을 받아오는 로직이 필요
-
-  // answer를 getter로 선언
   String get answer {
     if (recognizedAnswer == '0') {
       return "종이";
@@ -59,7 +53,6 @@ class AnswerResultPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // 예시에서는 "종이"가 정답
     bool isCorrect = selectedAnswer == recognizedAnswer;
 
     return Scaffold(
@@ -78,7 +71,6 @@ class AnswerResultPage extends StatelessWidget {
             if (isCorrect)
               Column(
                 children: [
-                  // 로컬 이미지 예시
                   Image.asset('assets/images/${enganswer}.jpg',
                       width: 500, height: 250, fit: BoxFit.cover),
                 ],
@@ -92,11 +84,10 @@ class AnswerResultPage extends StatelessWidget {
               textAlign: TextAlign.center,
             ),
             SizedBox(height: 20),
-            // 틀렸을 때 '다시 시도' 버튼
             if (!isCorrect)
               ElevatedButton(
                 onPressed: () {
-                  Navigator.pop(context); // AnswerChoice로 돌아가기
+                  Navigator.pop(context);
                 },
                 child: Text('다시 시도'),
               ),

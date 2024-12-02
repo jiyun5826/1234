@@ -29,21 +29,10 @@ class CameraPage1State extends State<CameraPage1> {
                   height: 150,
                   child: FloatingActionButton(
                     onPressed: () {
-                      // showDialog(
-                      //   context: context,
-                      //   builder: (context) => AlertDialog(
-                      //     contentPadding: EdgeInsets.zero,
-                      //     content: Container(
-                      //       width: 700,
-                      //       height: 400,
-                      //       child: CameraRecognitionPage(),
-                      //     ),
-                      //   )
-                      // )
-
                       Navigator.of(context).push(
                         MaterialPageRoute(
-                            builder: (context) => CameraRecognitionPage1()),
+                          builder: (context) => CameraRecognitionPage1(),
+                        ),
                       );
                     },
                     child: Icon(Icons.camera_alt),

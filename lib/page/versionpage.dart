@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:project/page/camerapage1.dart';
 import 'package:project/page/camerapage2.dart';
-// import 'package:project/quiz/answerchoice.dart';
 
 class VersionPage extends StatelessWidget {
   const VersionPage({super.key});
@@ -24,15 +23,13 @@ class VersionPage extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.all(50),
                   child: Container(
-                    width: 150, // 원하는 너비
-                    height: 150, // 원하는 높이
+                    width: 150,
+                    height: 150,
                     child: FloatingActionButton(
                       onPressed: () {
                         Navigator.of(context).push(
                           MaterialPageRoute(
-                              builder: (context) =>
-                                  CameraPage1() //원래 camerapage1으로 연결돼야하는데 확인차 그냥 answrchoice로 연결시켜놈
-                              ),
+                              builder: (context) => CameraPage1()),
                         );
                       },
                       child: Column(
@@ -48,8 +45,8 @@ class VersionPage extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.all(50),
                   child: Container(
-                    width: 150, // 원하는 너비
-                    height: 150, // 원하는 높이
+                    width: 150,
+                    height: 150,
                     child: FloatingActionButton(
                       onPressed: () {
                         Navigator.of(context).push(

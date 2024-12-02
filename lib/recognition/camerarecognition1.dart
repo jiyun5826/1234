@@ -116,11 +116,6 @@ class CameraRecognitionPage1State extends State<CameraRecognitionPage1> {
                       ),
                     ),
                     SizedBox(height: 20),
-                    Text(
-                      'Prediction Result: $_result',
-                      style: TextStyle(fontSize: 16),
-                    ),
-                    SizedBox(height: 20),
                     ElevatedButton(
                       onPressed: () async {
                         await _captureAndRunModel(); // 사진 촬영 및 모델 실행

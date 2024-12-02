@@ -1,6 +1,5 @@
-// answer_choice.dart
 import 'package:flutter/material.dart';
-import 'package:project/quiz/answeresult.dart'; // AnswerResultPage를 import
+import 'package:project/quiz/answeresult.dart';
 
 class AnswerChoice extends StatelessWidget {
   final String result;

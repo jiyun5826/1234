@@ -6,10 +6,20 @@ class Open extends StatelessWidget {
 
   const Open({super.key, required this.recognizedAnswer});
 
-  // recognizedAnswer를 getter로 선언
-  // String get recognizedAnswer => '0'; // 실제로는 값을 받아오는 로직이 필요
+  String get enganswer {
+    if (recognizedAnswer == '0') {
+      return "paper";
+    } else if (recognizedAnswer == '1') {
+      return "plastic";
+    } else if (recognizedAnswer == '2') {
+      return "can";
+    } else if (recognizedAnswer == '3') {
+      return "general waste";
+    } else {
+      return "알 수 없음";
+    }
+  }
 
-  // answer를 getter로 선언
   String get answer {
     if (recognizedAnswer == '0') {
       return "종이";
@@ -34,6 +44,8 @@ class Open extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            Image.asset('assets/images/${enganswer}.jpg',
+                width: 500, height: 250, fit: BoxFit.cover),
             Text(
               "이 쓰레기는 ${answer}입니다.",
               style: TextStyle(fontSize: 18),
